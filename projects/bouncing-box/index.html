@@ -35,7 +35,10 @@
 			
 			var box = jQuery('.box');	// reference to the HTML .box element
 			var board = jQuery('.board');	// reference to the HTML .board element
-			var boardWidth = board.width();	// the maximum X-Coordinate of the screen
+            var boardWidth = board.width();	// the maximum X-Coordinate of the screen
+            /*   var colorStr = "rgb(250, 250, 250)";
+                 box.css('background-color', colorStr);
+            */
 			// Every 35 milliseconds, call the update Function (see below)
 			setInterval(update, 35);
 			
@@ -91,8 +94,19 @@
 			it should increase the points total, increase the speed, and move the box to
 			the left side of the screen.
             */
-            
+           /* function getRandomColor() {
+                R = Math.floor(Math.random() * 250);
+                G = Math.floor(Math.random() * 250);
+                B = Math.floor(Math.random() * 250);
+                colorStr = "rgb(" + R + ", " + G + ", " + B + ")";
+                return colorStr;
+            }
+            */
+
 			function handleBoxClick() {
+                
+              // getRandomColor();
+
                 positionX = (Math.random() * boardWidth);
                 score += 1;
                 changeBoxText(score)
@@ -104,7 +118,7 @@
                 positionY =(Math.random() * boardHeight);
                     if (changeInY > 0) {
                         changeInY += 3;
-                    } else changeInY = -3;
+                    } else changeInY -= 3;
 			};
 		})();
 	</script>
