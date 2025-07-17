@@ -20,6 +20,13 @@
         <body>
             <div class = "container-fluid">
                 
+                <div id="navbar"></div>
+                    <script>
+                      fetch('../navbar.html')
+                        .then(res => res.text())
+                        .then(data => document.getElementById('navbar').innerHTML = data);
+                    </script>
+                
                 <main>
                     <h4> <a href= "posts/blog1.html"> Blog 1 </a> </h4>
                     <p>A test blog entry to see how site functions</p>
