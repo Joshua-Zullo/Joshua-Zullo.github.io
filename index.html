@@ -19,22 +19,12 @@
         
         <body>
             <div class = "container-fluid">
-                <nav class="navbar navbar-default">
-  
-                    <div class="navbar-header">
-                      <a class="navbar-brand" href="index.html">Joshua's Website</a>
-                    </div>
-                    <ul class="nav navbar-nav">
-                      <li><a href="blogs/blog.html">Blogs</a></li>
-                      <li><a href="reviews/media_Review.html">Media Review</a></li>
-                      <li><a href="biography/about_Me.html">About Me</a></li>
-                      <li><a href="photos/photo_Gallery.html">Photo Gallery</a></li>
-                      <li><a href="employers/employers.html">For Employers</a></li>
-                      <li><a href="portfolio/portfolio.html">Portfolio</a></li>
-                      <li><a href="extras/extra.html">Miscellaneous</a></li>
-                    </ul>
-  
-                </nav>
+                 <div id="navbar"></div>
+                    <script>
+                      fetch('../navbar.html')
+                        .then(res => res.text())
+                        .then(data => document.getElementById('navbar').innerHTML = data);
+                    </script>
             
                 <main>
                     <!-- explain website purpse-->
